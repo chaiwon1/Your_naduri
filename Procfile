@@ -1,0 +1,1 @@
+web: gunicorn --workers=100 'flask:create_app()'

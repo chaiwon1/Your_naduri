@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>당신의 나들이</title>
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="../static/css/main.css"/>
+        <noscript><link rel="stylesheet" href="../static/css/noscript.css"/></noscript>
+    </head>
+
+    <body class="is-preload">
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1>
+                    <a href="/">당신의 나들이</a>
+                </h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle">
+                                <span>Menu</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/predict">Prediction</a>
+                                    </li>
+                                    <li>
+                                        <a href="/recommand">Recommend</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@bgly">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Main -->
+            <article id="main">
+                <header>
+                    <h2>주변 맛집 추천</h2>
+                    <p>나들이 갈 서울 지역의 주변 맛집을 알려드릴게요</p>
+                </header>
+                <section class="wrapper style5">
+                    <div class="inner">
+
+                        <section>
+                            <h4 style="text-align:center">나들이 갈 서울 지역</h4>
+                            <div class="row gtr-uniform" style="display:inherit">
+                                <form method="POST" ,="," action="{{url_for('recommand.recommand')}}">
+                                    <div class="col-6 col-12-xsmall">
+                                        <input type="text" name="지역" id="demo-name" value="" placeholder="지역을 입력해주세요"/>
+                                    </div>
+                                    <ul class="actions special">
+                                        <li><input type="submit" value="Recommend" class="primary"/></li>
+                                        <li><input type="reset" value="Reset"/></li>
+                                    </ul>
+                                </form>
+                            </div>
+
+                        </section>
+                    </article>
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <ul class="copyright">
+                            <p>해당 페이지는 코드스테이츠 AI 부트캠프 프로젝트를 위해 제작되었습니다.<br/>
+                                기상청, 서울 공공데이터, 네이버 검색 OPEN API를 사용하였습니다.<br/>
+                                머신러닝 모델은 Randomforest 모델을 사용하였습니다.</p>
+                            <li>기획 :
+                                <a href="https://github.com/chaiwon1/AI_13_section3_project">현 채 원</a>
+                            </li>
+                            <li>Design:
+                                <a href="http://html5up.net">HTML5 UP</a>
+                            </li>
+                        </ul>
+                    </footer>
+
+                </div>
+
+                <!-- Scripts -->
+                <script src="../static/js/jquery.min.js"></script>
+                <script src="../static/js/jquery.scrollex.min.js"></script>
+                <script src="../static/js/jquery.scrolly.min.js"></script>
+                <script src="../static/js/browser.min.js"></script>
+                <script src="../static/js/breakpoints.min.js"></script>
+                <script src="../static/js/util.js"></script>
+                <script src="../static/js/main.js"></script>
+
+            </body>
+
+        </html>

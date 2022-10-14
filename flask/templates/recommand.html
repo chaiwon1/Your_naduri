@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>당신의 나들이</title>
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="../static/css/main.css"/>
+        <noscript><link rel="stylesheet" href="../static/css/noscript.css"/></noscript>
+    </head>
+
+    <body class="landing is-preload">
+
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header" class="alt">
+                <h1>
+                    <a href="/">당신의 나들이</a>
+                </h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle">
+                                <span>Menu</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/predict">Prediction</a>
+                                    </li>
+                                    <li>
+                                        <a href="/recommand">Recommend</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@bgly">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="inner">
+                    <h2>{{ location }}</h2>
+                    <p>주변 맛집을<br/>
+                        알려드릴게요</p><br/>
+                </div>
+                <a href="#two" class="more scrolly">Recommend</a>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="wrapper alt style2">
+                {% for item in recommand %}
+                    <section class="spotlight">
+                        <div class="image"><img src="images/pic01.jpg" alt=""/></div>
+                        <div class="content">
+                            <h2>{{ loop.index }}. 이 지역의 추천 식당은<br/>
+                                {{ item['title'] }}r</h2>
+                            <p>식당의 카테고리는
+                                {{ item['category'] }}이고<br>
+                                주소는
+                                {{ item['roadAddress'] }}입니다.<br>
+                                <a href="{{ item['link'] }}">더 보기</a>
+                            </p>
+                        </div>
+                    </section>
+                {% endfor %}
+            </section>
+
+            <!-- One -->
+            <section id="one" class="wrapper style1 special">
+                <div class="inner">
+                    <header class="major">
+                        <h2>당신의 서울 나들이가 더욱 즐거워질 수 있도록</h2>
+                        <p>코로나 시국이 끝나가고 있는 지금,
+                            <br/>
+                            오랜만에 떠난 당신의 나들이가 즐거웠으면 좋겠습니다.<br/>
+                            그러기 위해 저희가 더욱 노력하겠습니다.</p>
+                    </header>
+                    <ul class="icons major">
+                        <li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
+                        <li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
+                        <li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section id="cta" class="wrapper style4">
+                <div class="inner">
+                    <header>
+                        <h2>현 채 원</h2>
+                        <br>세상의 많은 데이터가 더 많이 활용될 수 있도록</p>
+                </header>
+                <ul class="actions stacked">
+                    <li>
+                        <a href="https://github.com/chaiwon1" class="button fit primary">GITHUB</a>
+                    </li>
+                    <li>
+                        <a href="https://velog.io/@bgly" class="button fit">BLOG</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <p>해당 페이지는 코드스테이츠 AI 부트캠프 프로젝트를 위해 제작되었습니다.<br/>
+                    기상청, 서울 공공데이터, 네이버 검색 OPEN API를 사용하였습니다.<br/>
+                    머신러닝 모델은 Randomforest 모델을 사용하였습니다.</p>
+                <li>기획 :
+                    <a href="https://github.com/chaiwon1/AI_13_section3_project">현 채 원</a>
+                </li>
+                <li>Design:
+                    <a href="http://html5up.net">HTML5 UP</a>
+                </li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/jquery.scrollex.min.js"></script>
+    <script src="../static/js/jquery.scrolly.min.js"></script>
+    <script src="../static/js/browser.min.js"></script>
+    <script src="../static/js/breakpoints.min.js"></script>
+    <script src="../static/js/util.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

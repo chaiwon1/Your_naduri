@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>당신의 나들이</title>
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="../static/css/main.css"/>
+        <noscript><link rel="stylesheet" href="../static/css/noscript.css"/></noscript>
+    </head>
+
+    <body class="landing is-preload">
+
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header" class="alt">
+                <h1>
+                    <a href="/">당신의 나들이</a>
+                </h1>
+                <nav id="nav">
+                    <ul>
+                        <li class="special">
+                            <a href="#menu" class="menuToggle">
+                                <span>Menu</span></a>
+                            <div id="menu">
+                                <ul>
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/predict">Prediction</a>
+                                    </li>
+                                    <li>
+                                        <a href="/recommand">Recommend</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@bgly">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="inner">
+                    <h2>당신의 나들이 날{{ date }}의</h2>
+                    {% if pred %}
+                        <h3>지하철 예상 이용객수는<br>{{ pred }}명 입니다.</h3><br/>
+                    {% endif %}
+                    {% if pred > 3538305.15 %}
+                        <h4>평소보다 지하철 이용객수가 많습니다.<br/>다른 교통수단을 이용해보시는 것은 어떨까요?</h4>
+                    {% else %}
+                        <h4>평소보다 지하철 이용객수가 적습니다.<br/>쾌적한 지하철을 이용하실 수 있습니다</h4>
+                    {% endif %}
+
+                    <ul class="actions special">
+                        <li>
+                            <a href="/recommand" class="button primary small">맛집 추천</a>
+                        </li>
+                        <li>
+                            <a href="/" class="button small">처음으로</a>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <ul class="copyright">
+                    <p>해당 페이지는 코드스테이츠 AI 부트캠프 프로젝트를 위해 제작되었습니다.<br/>
+                        기상청, 서울 공공데이터, 네이버 검색 OPEN API를 사용하였습니다.<br/>
+                        머신러닝 모델은 Randomforest 모델을 사용하였습니다.</p>
+                    <li>&기획 :
+                        <a href="https://github.com/chaiwon1/AI_13_section3_project">현 채 원</a>
+                    </li>
+                    <li>Design:
+                        <a href="http://html5up.net">HTML5 UP</a>
+                    </li>
+                </ul>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/jquery.scrollex.min.js"></script>
+        <script src="../static/js/jquery.scrolly.min.js"></script>
+        <script src="../static/js/browser.min.js"></script>
+        <script src="../static/js/breakpoints.min.js"></script>
+        <script src="../static/js/util.js"></script>
+        <script src="../static/js/main.js"></script>
+
+    </body>
+
+</html>
