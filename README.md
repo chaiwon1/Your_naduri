@@ -65,7 +65,7 @@
 <br>
 <br>
 
-<h1>워크플로우</h1>
+<h1>아키텍쳐</h1>
 
 ![그림1](https://user-images.githubusercontent.com/95471902/195664840-addbecf0-3f2e-42a6-a5d2-3e7337721687.png)
 
